@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Makhahlamba Tours Gallery</title>
+    <style>
+        body {
+            padding-top: 56px;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .navbar {
+            background-color: #2c3e50;
+        }
+        .navbar-brand, .nav-link {
+            color: #ecf0f1 !important;
+        }
+        .nav-link:hover {
+            color: #3498db !important;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .fade-in.appear {
+            opacity: 1;
+        }
+        .nav-buttons {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+        .nav-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .nav-button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Makhahlamba Tours Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-buttons">
+        <button id="goUp" class="nav-button">↑</button>
+        <button id="goDown" class="nav-button">↓</button>
+    </div>
+
+    <main class="container mt-4">
+        <section id="home" class="fade-in p-4 mb-4">
+            <h1>Welcome to Our Gallery</h1>
+            <p>Explore the breathtaking beauty of our tours through our photo gallery.</p>
+        </section>
+
+        <section id="gallery" class="fade-in p-4 mb-4">
+            <h2 class="mb-4">Photo Gallery</h2>
+            <div class="row">
+                <!-- Replace the src attributes with your actual image paths -->
+                <div class="col-md-4 gallery-item">
+                    <img src="animal.jpg" alt="Tour Image 1" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="animals.png" alt="Tour Image 2" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="guidedtours.jpg" alt="Tour Image 3" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="friends.jpg" alt="Tour Image 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="transport.png" alt="Tour Image 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="watersource.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="bridge.jpg" alt="Tour Image 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="hippo.jpg" alt="Tour Image 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="tourists.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="men.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="post.jpg" alt="Tour Image 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="rocks.jpg" alt="Tour Image 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="mountain.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="cook.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="old.jpg" alt="Tour Image 4" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="market.jpg" alt="Tour Image 5" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="beading.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="sofa-clay.jpg" alt="Tour Image 6" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in p-4 mb-4">
+            <h2 class="mb-4">Contact Us</h2>
+            <p>Interested in booking a tour or have questions about our gallery? Get in touch!</p>
+            <p>Phone: (+27)63-042-4264</p>
+            <p>Email: 0731494555ntsila@gmail.com</p>
+        </section>
+    </main>
+
+    <footer class="text-center py-4 mt-4">
+        <div class="social-links mb-3">
+            <a href="https://www.tiktok.com/@makhahlamba.pty.l?_t=8qSnfnncxhl&_r=1" class="mx-2" target="_blank"><img src="tiktok.svg" alt="TikTok"></a>
+            <a href="https://www.instagram.com/makhahlamba23?igsh=MXhmYnhuNnJpdTk0NQ==" class="mx-2" target="_blank"><img src="instagram.svg" alt="Instagram"></a>
+            <a href="https://wa.me/+27630424264" class="mx-2" target="_blank"><img src="whatsapp.svg" alt="WhatsApp"></a>
+        </div>
+        <p class="mb-0">&copy; 2024 Makhahlamba Tours and Transportation. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0.5,
+                rootMargin: "0px 0px -100px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('appear');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Navigation buttons functionality
+            const goUpButton = document.getElementById('goUp');
+            const goDownButton = document.getElementById('goDown');
+            const scrollDistance = window.innerHeight;
+
+            goUpButton.addEventListener('click', () => {
+                window.scrollBy({
+                    top: -scrollDistance,
+                    behavior: 'smooth'
+                });
+            });
+
+            goDownButton.addEventListener('click', () => {
+                window.scrollBy({
+                    top: scrollDistance,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
