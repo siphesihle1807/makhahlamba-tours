@@ -37,13 +37,6 @@
             background-color: #2c3e50;
             color: #ecf0f1;
         }
-        .fade-in {
-            opacity: 0;
-            transition: opacity 0.5s ease-in;
-        }
-        .fade-in.appear {
-            opacity: 1;
-        }
         .nav-buttons {
             position: fixed;
             right: 20px;
@@ -92,12 +85,12 @@
     </div>
 
     <main class="container mt-4">
-        <section id="home" class="fade-in p-4 mb-4">
+        <section id="home" class="p-4 mb-4">
             <h1>Welcome to Our Gallery</h1>
             <p>Explore the breathtaking beauty of our tours through our photo gallery.</p>
         </section>
 
-        <section id="gallery" class="fade-in p-4 mb-4">
+        <section id="gallery" class="p-4 mb-4">
             <h2 class="mb-4">Photo Gallery</h2>
             <div class="row">
                 <!-- Replace the src attributes with your actual image paths -->
@@ -158,7 +151,7 @@
             </div>
         </section>
 
-        <section id="contact" class="fade-in p-4 mb-4">
+        <section id="contact" class="p-4 mb-4">
             <h2 class="mb-4">Contact Us</h2>
             <p>Interested in booking a tour or have questions about our gallery? Get in touch!</p>
             <p>Phone: (+27)63-042-4264</p>
@@ -178,27 +171,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = {
-                threshold: 0.5,
-                rootMargin: "0px 0px -100px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    } else {
-                        entry.target.classList.add('appear');
-                        appearOnScroll.unobserve(entry.target);
-                    }
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
-
             // Navigation buttons functionality
             const goUpButton = document.getElementById('goUp');
             const goDownButton = document.getElementById('goDown');
